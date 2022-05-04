@@ -215,7 +215,7 @@ db_download_ncbi <- function(verbose = TRUE, overwrite = FALSE) {
 
 #' @export
 #' @rdname db_download
-db_download_itis <- function(verbose = TRUE, overwrite = FALSE, use_curl = TRUE, timeout = 100) {
+db_download_itis <- function(verbose = TRUE, overwrite = FALSE, use_curl = FALSE, timeout = 1000) {
   # paths
   db_url <- 'https://itis.gov/downloads/itisSqlite.zip'
   db_path <- file.path(tdb_cache$cache_path_get(), 'itisSqlite.zip')
