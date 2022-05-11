@@ -219,9 +219,11 @@ db_download_itis <- function(verbose = TRUE, overwrite = FALSE, use_curl = FALSE
   # paths
   db_url <- 'https://itis.gov/downloads/itisSqlite.zip'
   db_path <- file.path(tdb_cache$cache_path_get(), 'itisSqlite.zip')
+  print(paste(db_path, "db path is..."))
   db_path_file <- file.path(tdb_cache$cache_path_get(), 'itisSqlite')
+  print(paste(db_path_file, "db path file is..."))
   final_file <- file.path(tdb_cache$cache_path_get(), 'ITIS.sqlite')
-
+  print(paste(final_file, "final_file is..."))
   assert(verbose, "logical")
   assert(overwrite, "logical")
   if (file.exists(final_file) && !overwrite) {
